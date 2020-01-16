@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+int main(void)
+{
+  int i,n;
+  int N=100; /*Å‘å‚Ì”*/
+  int prime[500]; /*‘f”‚ğŠi”[‚·‚é”z—ñ*/
+  int ptr=0; /*’Šo‚µ‚½‘f”‚Ì”*/
+  int counter=0; /*œZ‚Ì‰ñ”*/
+
+  prime[0]=2; /*Å‰‚Ì‘f”*/
+  ptr++;
+
+  for(n=3;n<=N;n+=2) { /*Šï”‚Ì‚İ‚ğ‘ÎÛ*/
+    for(i=1;i<ptr;i++) { /*‚·‚Å‚É’Šo‚µ‚½‘f”‚ÅœZ*/
+      counter++;
+      if(n%prime[i]==0) /*Š„‚èØ‚ê‚½‚ç‘f”‚Å‚È‚¢*/
+        break;
+    }
+    if(ptr==i)
+      prime[ptr++]=n; /*ÅŒã‚Ü‚ÅŠ„‚èØ‚ê‚È‚¢*/
+  }
+  for(i=0;i<ptr;i++) printf("%d\n", prime[i]);
+  printf("Total number of calculation : %d\n", counter);
+
+  return(0);
+}

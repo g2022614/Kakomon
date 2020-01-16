@@ -1,0 +1,5 @@
+sh ver
+Cisco IOS Software, C1700 Software (C1700-IPBASE-M), Version 12.4(6)T6.
+Configuration register is 0x2102
+
+cn-26#

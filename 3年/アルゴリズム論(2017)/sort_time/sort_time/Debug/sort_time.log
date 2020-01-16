@@ -1,0 +1,5 @@
+﻿  Source.cpp
+d:\r20\3年\アルゴリズム論(2017)\sort_time\sort_time\source.cpp(18): warning C4244: '引数': 'time_t' から 'unsigned int' への変換です。データが失われる可能性があります。
+d:\r20\3年\アルゴリズム論(2017)\sort_time\sort_time\source.cpp(15): warning C4101: 'j': ローカル変数は 1 度も使われていません。
+  sort_time.vcxproj -> D:\R20\3年\アルゴリズム論(2017)\sort_time\Debug\sort_time.exe
+  sort_time.vcxproj -> D:\R20\3年\アルゴリズム論(2017)\sort_time\Debug\sort_time.pdb (Full PDB)

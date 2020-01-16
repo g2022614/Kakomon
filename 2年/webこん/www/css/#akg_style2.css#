@@ -1,0 +1,13 @@
+
+body{text-align:center; margin:0; padding:0;}
+ 
+#main{width:720px; float:left;background:#aaa;}
+ 
+#side{width:260px; background:#eee;} 
+
+#sideWrap{width:260px; float:right;position:relative;border-bottom:2px solid red;}
+ 
+#contents{width:1000px; margin:0 auto 30px; overflow:hidden;}
+ 
+
+ 

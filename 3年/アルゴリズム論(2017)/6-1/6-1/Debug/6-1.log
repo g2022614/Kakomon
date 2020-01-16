@@ -1,0 +1,4 @@
+﻿  Source.cpp
+d:\r20\3年\アルゴリズム論(2017)\6-1\6-1\source.cpp(17): warning C4244: '初期化中': 'double' から 'int' への変換です。データが失われる可能性があります。
+  6-1.vcxproj -> D:\R20\3年\アルゴリズム論(2017)\6-1\Debug\6-1.exe
+  6-1.vcxproj -> D:\R20\3年\アルゴリズム論(2017)\6-1\Debug\6-1.pdb (Full PDB)

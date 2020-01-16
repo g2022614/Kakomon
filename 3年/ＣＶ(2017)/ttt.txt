@@ -1,0 +1,145 @@
+Script started on Tue Apr 25 22:51:04 2017
+u276125@imac-408[31]: cat testcp.c
+#include<stdio.h>
+#include<math.h>
+#define SIZE 4
+#define LEVEL 8
+
+int main(void){
+  
+  //テスト仮想画像配列
+  int test[SIZE][SIZE] = {{0,2,2,7},
+			  {0,2,3,7},
+			  {1,1,5,7},
+			  {1,1,6,7}};
+
+  //画素/レベルを求める
+  int piclv = (SIZE * SIZE) / LEVEL;
+  
+  //濃度を数えるための配列
+  int noudo[LEVEL] = {};
+
+  //カウント変数
+  int i,j,k;
+
+  //計算に使用
+  int wa = 0;
+  //int div = 0; 
+  int move[LEVEL] = {};
+  
+  //処理前の表示
+  printf("〜処理前〜\n");
+  for(i = 0; i < SIZE; i++){
+    for(j = 0; j < SIZE; j++){
+      printf("%d  ",test[i][j]);
+    }
+    printf("\n");
+  }
+  
+   printf("\n");
+   printf("画素/レベル：%d\n",piclv);
+   printf("\n");
+  
+  //濃度をカウント
+  for(i = 0; i < SIZE; i++){
+    for(j = 0; j < SIZE; j++){
+      noudo[test[i][j]]++;
+    }
+  }
+
+  //濃度を表示
+  for(i = 0;i < LEVEL; i++){
+    printf("%dレベル：%d個\n",i,noudo[i]);
+  }
+  
+  printf("\n");
+
+  //画素の移動計算部分
+  for(i = 0; i < LEVEL; i++){
+
+    /*move[i] = div;
+      wa += noudo[i];
+      div = wa / piclv;*/
+          
+    if(i == 0){
+      move[i] = 0;
+    }
+    
+    else{
+      wa += noudo[i - 1];
+      move[i] = wa / piclv;
+    }
+  }
+  
+  printf("~画素の移動~\n");
+  for(i = 0;i < LEVEL; i++){
+    printf("%dレベル：%dに移動\n",i,move[i]);
+  }
+
+  //画素の更新
+  for(i = 0; i < SIZE; i++){
+    for(j = 0; j < SIZE; j++){
+      
+      for(k = 0; k < LEVEL; k++){
+	if(k == test[i][j]){
+	  test[i][j] = move[k];
+	  break;
+	}
+      }
+      
+    }
+  }
+  
+  printf("\n");
+
+  //処理後の表示
+  printf("〜処理後〜\n");
+  for(i = 0; i < SIZE; i++){
+    for(j = 0; j < SIZE; j++){
+      printf("%d  ",test[i][j]);
+    }
+    printf("\n");
+  }
+  
+  printf("\n");
+  
+  return 0;
+}
+u276125@imac-408[32]: ./testcp
+〜処理前〜
+0  2  2  7  
+0  2  3  7  
+1  1  5  7  
+1  1  6  7  
+
+画素/レベル：2
+
+0レベル：2個
+1レベル：4個
+2レベル：3個
+3レベル：1個
+4レベル：0個
+5レベル：1個
+6レベル：1個
+7レベル：4個
+
+~画素の移動~
+0レベル：0に移動
+1レベル：1に移動
+2レベル：3に移動
+3レベル：4に移動
+4レベル：5に移動
+5レベル：5に移動
+6レベル：5に移動
+7レベル：6に移動
+
+〜処理後〜
+0  3  3  6  
+0  3  4  6  
+1  1  5  6  
+1  1  5  6  
+
+u276125@imac-408[33]: exit
+exit
+
+Script done on Tue Apr 25 22:51:20 2017

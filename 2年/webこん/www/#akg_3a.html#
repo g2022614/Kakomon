@@ -1,0 +1,28 @@
+
+
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="side-fixed.js">script>
+ 
+<div id="header">
+<p>私はヘッダー。</script>p>
+</div><!-- / #header -->
+ 
+<div id="contents">
+ 
+<div id="main">
+<p>それがしがメインエリア。
+※改行とかで適当に高さ調整してください。</p>p>
+</div>div><!-- / #main -->
+ 
+<div id="sideWrap">
+<div id="side">
+<p>我はサイドバー。
+※改行とかで適当に高さ調整してください。</p>p>
+</div>div><!-- / #side -->
+</div>div><!-- / #sideWrap -->
+ 
+</div>div><!-- / #contents -->
+ 
+<div id="footer">
+<p>ワタスはフッター。</p>p>
+</div>div><!-- / #footer --></script>

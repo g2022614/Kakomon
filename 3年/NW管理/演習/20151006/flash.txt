@@ -1,0 +1,8 @@
+sh flash
+
+System flash directory:
+File  Length   Name/status
+  1   11744028  c1700-ipbase-mz.124-6.T6.bin  
+[11744092 bytes used, 21548192 available, 33292284 total]
+
+cn-26#

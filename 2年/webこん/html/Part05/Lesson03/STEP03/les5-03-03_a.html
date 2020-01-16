@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Part05-Lesson03</title>
+	<style>
+		#parent {
+			width: 500px;
+			background-color: #CCC;
+		}
+		#pink {
+			float: left;
+			width: 200px;
+			background-color: #FF69B4;
+		}
+		#blue {
+			float: right;
+			width: 200px;
+			background-color: #00BFFF;
+		}
+		.clearfix {
+			zoom:1;
+		}
+		.clearfix:after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<div id="parent" class="clearfix">
+		<div id="pink">
+			<p>左側のコンテンツ</p>
+		</div>
+		<div id="blue">
+			<p>右側のコンテンツ</p>
+		</div>
+	</div>
+</body>
+</html>

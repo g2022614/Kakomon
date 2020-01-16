@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang = "ja">
+  <head>
+
+    <meta charset="UTF-8">
+    <title>ジョージの生態</title>
+    <link rel = "icon" href = "image/favicon.ico">
+    <link rel = "stylesheet" href = "css/nishida_style.css">
+    
+  </head>
+  
+  <body oncontextmenu="return false"> 
+    
+    <h1>西田 城司の生態</h1>
+    <hr>
+    <div id = "box">        
+
+      <div id = "right">
+	<img src ="image/jo-zi.jpg" width = "400" height = "400" alt = "jozi">
+	<div id = "twitter">
+	  <div styre = "background:#000000; width:300px; border:5px groove #0000ff; height:300px;">          
+	    <a class="twitter-timeline"
+	       data-dnt="true" 
+	       href="https://twitter.com/n_jozibot" 
+	       width = "200"
+	       data-chrome = "nofooter transparent"
+	       data-widget-id="740041383411490816">
+	      Tweets by @n_jozibot
+	    </a>
+            <script>!function(d,s,id){
+	       var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+	       if(!d.getElementById(id)) {
+		 js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";
+		 fjs.parentNode.insertBefore(js,fjs);
+	       }
+	     }(document,"script","twitter-wjs");
+	    </script>
+	  </div>	
+	</div>
+      </div>
+      
+      <div id = "left">
+	<center> <h1>†西田　城司†</h1></center>
+	<hr>
+	<p>西田城司(にしだ じょうじ　愛称:とり、メトロノーム) 福島県が産んだ奇跡の生命体。</p>
+	<p>脅威の記憶力のなさを誇る。その記憶力のなさからついた通り名が†トリ†。それと重度の中二病疾患者である。</p>
+	<p>得意なことはゲーム。趣味はゲーム。休みの日にはゲーム。授業中もゲーム。どうしようもない男である。</p>
+	<p>また、ある程度のイジりが問題ないのだが、やりすぎるとめげるので注意が必要である。</p>
+	<div id = "menu">
+	  <ol>目次
+	    <hr>
+	    <li>  人間性</li>
+	    <li>  趣味</li>
+	  </ol>
+	</div>
+	
+	<h2><a href =  "http://www.cse.ce.nihon-u.ac.jp/~u276154">ジョージのページ</a></h2>
+	<hr>
+	<h3>人間性</h3>
+	<p>Ｎｉｓｈｉｄａの人間性は、意外とまじめである。ピ逃げするくらいなら欠席で休む。それがＧｅｏｒｇｅである。</p>
+	<p>その志が原因で教習所の卒業（期限9ヶ月）をギリギリまで先延ばしにしていたジョージは、教習所を卒業するために</p>
+	<p>後期の授業を休みまくらなければいけないことになった。そのため後期の非常に単位が危うくなった。</p>
+	<p>しかしジョージは、そんな痛い失敗をしてもその志を貫いている。えらい。</p>
+	<s>そもそも教習所を9ヶ月かけて卒業するって何事</s>
+	<hr>	
+	<h3>趣味</h3>
+	<p>ゲーム</p>
+	<br>	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>    
+	
+	<div><a href="https://twitter.com/share" class="twitter-share-button" data-via="n_jozibot" data-lang="ja" data-size="large">ツイート</a>
+	  <script>
+	   !function(d,s,id){
+	     var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+	     if(!d.getElementById(id)){
+	     js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';
+	       fjs.parentNode.insertBefore(js,fjs);
+	     }
+	   }
+	   (document, 'script', 'twitter-wjs');
+	  </script>
+	  
+	  <a href="https://twitter.com/n_jozibot" class="twitter-follow-button" data-show-count="false" data-lang="ja" data-size="large">@n_jozibotさんをフォロー</a>
+	  <script>
+	   !function(d,s,id){
+	     var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+	     if(!d.getElementById(id)){
+	       js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';
+	       fjs.parentNode.insertBefore(js,fjs);
+	     }
+	   }
+	   (document, 'script', 'twitter-wjs');
+	  </script>
+	  
+	  <a href="https://twitter.com/intent/tweet?button_hashtag=%E3%82%B8%E3%83%A7%E3%83%BC%E3%82%B8%E3%81%82%E3%82%8B%E3%81%82%E3%82%8B" 
+	     class="twitter-hashtag-button" data-lang="ja" data-size="large" data-related="n_jozibot">Tweet #%E3%82%B8%E3%83%A7%E3%83%BC%E3%82%B8%E3%81%82%E3%82%8B%E3%81%82%E3%82%8B</a>
+	  <script>
+	   !function(d,s,id){
+	     var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+	     if(!d.getElementById(id)){
+	       js=d.createElement(s);
+	       js.id=id;js.src=p+'://platform.twitter.com/widgets.js';
+	       fjs.parentNode.insertBefore(js,fjs);
+	     }
+	   }
+	   (document, 'script', 'twitter-wjs');
+	  </script>
+	  
+	  <a href="https://twitter.com/intent/tweet?screen_name=n_jozibot" class="twitter-mention-button" data-lang="ja" data-size="large" data-related="n_jozibot">Tweet to @n_jozibot</a>
+	  <script>
+	   !function(d,s,id){
+	     var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){
+	       js=d.createElement(s);
+	       js.id=id;js.src=p+'://platform.twitter.com/widgets.js';
+	       fjs.parentNode.insertBefore(js,fjs);
+	     }
+	   }
+	   (document, 'script', 'twitter-wjs');
+	  </script>
+	</div>
+      </div>
+    </div>
+
+    <hr>
+    <p><a href = "index.html">ねもとのページへ戻る</a></p>
+  </body>
+</html>

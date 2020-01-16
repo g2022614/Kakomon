@@ -1,0 +1,48 @@
+Dialer1 is up, line protocol is up (spoofing)
+  Hardware is Unknown
+  Interface is unnumbered. Using address of Vlan10 (192.168.200.158)
+  MTU 1500 bytes, BW 56 Kbit/sec, DLY 20000 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation PPP, loopback not set
+  Keepalive set (10 sec)
+  DTR is pulsed for 1 seconds on reset
+  Interface is bound to Vi1
+  Last input never, output never, output hang never
+  Last clearing of "show interface" counters 00:02:51
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: weighted fair
+  Output queue: 0/1000/64/0 (size/max total/threshold/drops)
+     Conversations  0/0/16 (active/max active/max total)
+     Reserved Conversations 0/0 (allocated/max allocated)
+     Available Bandwidth 42 kilobits/sec
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     17 packets input, 206 bytes
+     27 packets output, 730 bytes
+Bound to:
+Virtual-Access1 is up, line protocol is up
+  Hardware is Virtual Access interface
+  MTU 1500 bytes, BW 56 Kbit/sec, DLY 20000 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation PPP, LCP Open
+  Listen: CDPCP
+  Open: IPCP
+  PPPoE vaccess, cloned from Dialer1
+  Vaccess status 0x44, loopback not set
+  Keepalive set (10 sec)
+  Interface is bound to Di1 (Encapsulation PPP)
+  Last input 00:01:31, output never, output hang never
+  Last clearing of "show interface" counters 00:01:55
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     28 packets input, 369 bytes, 0 no buffer
+     Received 0 broadcasts, 0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+     38 packets output, 874 bytes, 0 underruns
+     0 output errors, 0 collisions, 0 interface resets
+     0 unknown protocol drops
+     0 output buffer failures, 0 output buffers swapped out
+     0 carrier transitions

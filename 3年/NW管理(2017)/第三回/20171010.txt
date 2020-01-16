@@ -1,0 +1,92 @@
+runninn g-config
+Translating "running-config"...domain server (255.255.255.255)
+
+Translating "running-config"...domain server (255.255.255.255)
+ (255.255.255.255)
+Translating "running-config"...domain server (255.255.255.255)
+% Unknown command or computer name, or unable to find computer address
+cn-44#
+cn-44#running-configping 198.168.1.2
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 198.168.1.2, timeout is 2 seconds:
+.....
+Success rate is 0 percent (0/5)
+cn-44#show run
+Building configuration...
+
+Current configuration : 749 bytes
+!
+version 12.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname lab
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no aaa new-model
+ip cef
+!
+!
+!
+!
+!
+!
+!
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         interface FastEthernet0/0
+ --More--          ip address 192.168.1.144 255.255.255.0
+ --More--          duplex auto
+ --More--          speed auto
+ --More--         !
+ --More--         interface FastEthernet0/1
+ --More--          no ip address
+ --More--          shutdown
+ --More--          duplex auto
+ --More--          speed auto
+ --More--         !
+ --More--         interface FastEthernet0/0/0
+ --More--         !
+ --More--         interface FastEthernet0/0/1
+ --More--         !
+ --More--         interface FastEthernet0/0/2
+ --More--         !
+ --More--         interface FastEthernet0/0/3
+ --More--         !
+ --More--         interface Vlan1
+ --More--          no ip address
+ --More--         !
+ --More--         ip forward-protocol nd
+ --More--         !
+ --More--         ip http server
+ --More--         no ip http secure-server
+ --More--         !
+ --More--         !
+ --More--         control-plane
+ --More--         !
+ --More--         !
+ --More--         line con 0
+ --More--          password net
+ --More--          login
+ --More--         line aux 0
+ --More--         line vty 0 4
+ --More--          password net
+ --More--          no login
+ --More--         !
+ --More--         scheduler allocate 20000 1000
+ --More--         end
+ --More--         
+lab#
+lab#
+lab#
+lab#
+lab#
+lab#
+lab#
+lab#

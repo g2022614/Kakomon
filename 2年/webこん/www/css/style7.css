@@ -1,0 +1,26 @@
+table {
+    border: solid 1px #CCC;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+th,td {
+        padding: 10px;
+	border: solid 1px #CCC;
+}
+th {
+    width: 150px;
+    background-color: #DDD;
+    text-align: left;
+}
+td {
+    width: 200px;
+}
+caption {
+    color: #66C;
+}
+p {
+    font-size: 14px;
+}
+input[type=text] {
+    width: 300px;
+}

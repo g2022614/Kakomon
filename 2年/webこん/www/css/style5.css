@@ -1,0 +1,51 @@
+﻿			body {
+				background: #003489 url(image/bg.png) repeat-x top left;
+					}
+			p {	
+				color: gray;
+				line-height: 150%;
+			}
+			article {
+				background-color: #FFF;
+				width: 900px;
+				margin: 20px auto;
+				position: relative;
+			}
+			header {
+				padding: 20px 20px 0;
+				background-color: #FFF;
+			}
+			header h1 {
+				color: #900; 
+				font-size: 28px;
+			}
+			header p {
+				color: #C33;
+				font-style: italic;
+			}
+			.star {
+				position: absolute;
+				top: 40px;
+				right: 10px;
+			}
+			section {
+				float: left;
+				padding: 20px;
+				width: 260px;
+				background-color: #FFF;
+			}
+			section h2 {
+				font-size: 20px;
+			}
+			section p {
+				font-size: 14px;
+			}
+			.clearfix {
+				zoom:1;
+			}
+			.clearfix:after {
+			    display: block;
+			    clear: both;
+			    content: "";
+			}
+	

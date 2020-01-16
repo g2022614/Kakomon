@@ -1,0 +1,108 @@
+//各種インポート
+import java.applet.Applet;
+import java.awt.Label;
+import java.awt.Button;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+import java.awt.Panel;
+
+public class GameApplet extends Applet implements ActionListener{
+
+    private Board board; //Boardのインスタンス変数
+    private Button[][] button; //盤上のボタンのインスタンス変数
+    private Button reset; //リセットボタンのインスタンス変数
+    private Panel panel; //パネルのインスタンス変数
+    private Label message,message2; //ラベルのインスタンス変数
+
+    public void init(){
+        int i,j;
+
+        board = new Board(); //Boardを作る
+
+        BorderLayout border = new BorderLayout(); //ボーダーレイアウトマネージャー を作る
+        this.setLayout(border); //アプレットのレイアウトマネージャーをボーダーにす る
+
+        message = new Label("ゲームを開始できます"); //messageラベルを作る
+        this.add(message,BorderLayout.SOUTH); //南側にmessageラベルを貼る
+
+        message2= new Label("○×ゲーム!"); //message2ラベルを作る
+        this.add(message2,BorderLayout.NORTH); //北側にmessage2ラベルを貼る
+
+        reset = new Button("reset"); //resetボタンを作る
+        reset.addActionListener(this); //ボタンのアクションリスナーとしてアプレ ッ トを指定
+        this.add(reset,BorderLayout.EAST); //東側にresetボタンを貼る
+
+        panel = new Panel(); //パネルを作る
+        GridLayout grid = new GridLayout(3,3); //パネル用のグリッドレイアウトを 作 る
+        panel.setLayout(grid); //パネルをグリッドレイアウトにする
+
+        button = new Button[3][3]; //盤上のボタン配列を作る
+        for(i=0;i<3;i++){
+            for(j=0;j<3;j++){
+                button[i][j] = new Button(); //何も書かれていないボタンを作る
+                button[i][j].addActionListener(this); //ボタンのアクションリスナー としてアプレットを指定
+                panel.add(button[i][j]); //パネルにボタンを貼る
+            }
+        }
+        this.add(panel,BorderLayout.CENTER); //中央にパネルを貼る
+    }
+
+    //ボタンがクリックされた時の処理を行うメソッド
+    public void actionPerformed(ActionEvent e){
+        int i,j;
+
+        for(i=0;i<3;i++){
+            for(j=0;j<3;j++){
+                //button[i][j]ボタンが押された場合
+                if(e.getSource()==button[i][j]){
+                    switch(board.put(i,j)){ //board.put(i,j)の戻り値によって場合分 け
+                    case -1: //戻り値が-1の場合
+                        if(board.getTurn()==-1) //board.getTurn()の戻り値が-1の 場 合
+                            message.setText("既に勝敗が決まっています"); //message ラベルを変える
+                        else //board.getTurn()の戻り値が-1ではない場合
+                            message.setText("不正な位置には置けません"); //message ラベルを変える
+                        break;
+                    case 1:  //戻り値が1の場合
+                        button[i][j].setLabel("○"); //button[i][j]ボタンを○に す る
+                        message.setText("○の勝ちです"); //messageラベルを変える
+                        break;
+                    case 2: //戻り値が2の場合
+                        button[i][j].setLabel("×"); //button[i][j]ボタンを×に す る
+                        message.setText("×の勝ちです"); //messageラベルを変える
+                        break;
+                    case 0: //戻り値が0の場合
+                        if(board.get(i,j)==1) //board.get(i,j)の戻り値が1の場合
+                            button[i][j].setLabel("○"); //button[i][j]を○にす る
+                        if(board.get(i,j)==2) //board.get(i,j)の戻り値が2の場合
+                            button[i][j].setLabel("×"); //button[i][j]を×にす る
+                        message.setText("ターンが変わりました、置いてください"); //messageラベルを変える
+                        break;
+                    case 3: //戻り値が3の場合
+                        if(board.get(i,j)==1) //board.get(i,j)の戻り値が1の場合
+                            button[i][j].setLabel("○"); //button[i][j]を○にす る
+                        if(board.get(i,j)==2) //board.get(i,j)の戻り値が2の場合
+                            button[i][j].setLabel("×"); //button[i][j]を×にす る
+                        message.setText("引き分けです"); //messageラベルを変える
+                        break;
+                    default: //その他の場合
+                        break;
+                    }
+                }
+            }
+        }
+        //resetボタンが押された場合
+        if(e.getSource()==reset){
+            board.reset(); //board.resetを行う
+            //ボタンをリセット
+            for(i=0;i<3;i++){
+                for(j=0;j<3;j++){
+                    button[i][j].setLabel("");
+                }
+            }
+            //messageラベルを変える
+            message.setText("ゲームがリセットされました");
+        }
+    }
+}

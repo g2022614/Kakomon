@@ -1,0 +1,56 @@
+shi  ip route
+Codes: C - connected, S - static, I - IGRP, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP
+       i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area
+       * - candidate default, U - per-user static route, o - ODR
+       P - periodic downloaded static route
+
+Gateway of last resort is 192.168.200.254 to network 0.0.0.0
+
+S    192.168.226.0/24 [1/0] via 192.168.200.26
+C    192.168.122.0/24 is directly connected, Vlan122
+S    192.168.227.0/24 [1/0] via 192.168.200.27
+C    192.168.104.0/24 is directly connected, Vlan104
+C    192.168.121.0/24 is directly connected, Vlan121
+S    192.168.224.0/24 [1/0] via 192.168.200.24
+C    192.168.120.0/24 is directly connected, Vlan120
+S    192.168.225.0/24 [1/0] via 192.168.200.25
+S    192.168.230.0/24 [1/0] via 192.168.200.30
+S    192.168.231.0/24 [1/0] via 192.168.200.31
+C    192.168.108.0/24 is directly connected, Vlan108
+     172.16.0.0/24 is subnetted, 1 subnets
+C       172.16.255.0 is directly connected, Vlan3
+ --More--         S    192.168.215.0/24 [1/0] via 192.168.200.15
+S    192.168.228.0/24 [1/0] via 192.168.200.28
+S    192.168.214.0/24 [1/0] via 192.168.200.14
+S    192.168.229.0/24 [1/0] via 192.168.200.29
+S    192.168.234.0/24 [1/0] via 192.168.200.34
+C    192.168.200.0/24 is directly connected, Vlan11
+S    192.168.217.0/24 [1/0] via 192.168.200.17
+C    192.168.115.0/24 is directly connected, Vlan115
+S    192.168.235.0/24 [1/0] via 192.168.200.35
+S    192.168.216.0/24 [1/0] via 192.168.200.16
+C    192.168.114.0/24 is directly connected, Vlan114
+S    192.168.219.0/24 [1/0] via 192.168.200.19
+S    192.168.232.0/24 [1/0] via 192.168.200.32
+C    192.168.113.0/24 is directly connected, Vlan113
+S    192.168.218.0/24 [1/0] via 192.168.200.18
+S    192.168.233.0/24 [1/0] via 192.168.200.33
+C    192.168.112.0/24 is directly connected, Vlan112
+S    192.168.221.0/24 [1/0] via 192.168.200.21
+C    192.168.102.0/24 is directly connected, Vlan102
+C    192.168.119.0/24 is directly connected, Vlan119
+C    192.168.254.0/24 is directly connected, Vlan1
+S    192.168.220.0/24 [1/0] via 192.168.200.20
+C    192.168.118.0/24 is directly connected, Vlan118
+ --More--         C    192.168.103.0/24 is directly connected, Vlan103
+S    192.168.223.0/24 [1/0] via 192.168.200.23
+S    192.168.236.0/24 [1/0] via 192.168.200.36
+C    192.168.117.0/24 is directly connected, Vlan117
+S    192.168.222.0/24 [1/0] via 192.168.200.22
+C    192.168.116.0/24 is directly connected, Vlan116
+C    192.168.101.0/24 is directly connected, Vlan101
+S*   0.0.0.0/0 [1/0] via 192.168.200.254
+Switch-1#

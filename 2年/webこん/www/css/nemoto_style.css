@@ -1,0 +1,24 @@
+
+@-webkit-keyframes blink {
+   0% {color:#e60012;} 8.3% {color:#f39800;} 16.6% {color:#fff100;} 24.9% {color:#009944;} 33.2%{color:#0068b7;} 41.5% {color:#1d2088;} 49.8% {color:#920783;}58.1% {color:#1d2088;} 66.4%{color:#0068b7;} 74.7% {color:#009944;} 83% {color:#fff100;}  91.9% {color:#f39800;} 100% {color:#e60012;}
+}
+@keyframes blink {
+   0% {color:#e60012;} 8.3% {color:#f39800;} 16.6% {color:#fff100;} 24.9% {color:#009944;} 33.2%{color:#0068b7;} 41.5% {color:#1d2088;} 49.8% {color:#920783;}58.1% {color:#1d2088;} 66.4%{color:#0068b7;} 74.7% {color:#009944;} 83% {color:#fff100;}  91.9% {color:#f39800;} 100% {color:#e60012;}
+}
+#box{
+    margin-left:15%; 
+    margin-right:15%; 
+    margin-top:10px; 
+    margin-bottom:5px; 
+    padding-top:200px; 
+    padding-bottom:200px; 
+    border:5px groove #0000cc;
+    width:1200px;    
+    font-size:350%;
+
+    -webkit-animation: blink 6s infinite;
+    animation: blink 6s infinite;
+}
+
+
+

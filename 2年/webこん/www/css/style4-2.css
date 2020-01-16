@@ -1,0 +1,27 @@
+body {
+    background: #003489 url(../image/blue.jpg) repeat-x top left;
+}
+p {
+    color: gray;
+    line-height: 150%;
+}
+header {
+    background-color: #FFF;
+}
+header h1 {
+    color: #900; 
+    font-size: 28px;
+}
+header p {
+    color: #C33;
+    font-style: italic;
+}
+section {
+    background-color: #FFF;
+}
+section h2 {
+    font-size: 20px;
+}
+section p {
+    font-size: 14px;
+}

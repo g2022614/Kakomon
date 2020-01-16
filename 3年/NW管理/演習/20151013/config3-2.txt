@@ -1,0 +1,61 @@
+sh run
+Building configuration...
+
+Current configuration : 601 bytes
+!
+version 12.4
+service timestamps debug uptime
+service timestamps log uptime
+no service password-encryption
+!
+hostname lab
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$uAQY$43KfeHCwZbEjl9s8MmRbu.
+!
+no aaa new-model
+!
+resource policy
+!
+ip cef
+!
+!
+!
+ --More--         !
+!
+!
+!
+!
+!
+interface Ethernet0
+ ip address 192.168.31.254 255.255.255.0
+ half-duplex
+!
+interface FastEthernet0
+ ip address 192.168.200.131 255.255.255.0
+ speed auto
+!
+interface Serial0
+ no ip address
+ shutdown
+!
+!
+no ip http server
+!
+!
+control-plane
+ --More--         !
+!
+line con 0
+ password net
+ login
+line aux 0
+line vty 0 4
+ password kanri
+ login
+!
+end
+
+lab# exi

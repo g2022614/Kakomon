@@ -1,0 +1,432 @@
+#include<stdio.h>
+int combination(int n,int r){
+  if(n==r)
+    return 1;
+  else if(r==0)
+    return 1;
+  else if(r==1)
+    return n;
+  else
+    return (combination(n-1,r-1)+combination(n-1,r));
+}
+int main(void){
+  int n,r;
+  printf("n個の中からr個取り出す組み合わせを求めます\n");
+  printf("nの値は？:");
+  scanf("%d",&n);
+  printf("rの値は？:");
+  scanf("%d",&r);
+
+  printf("組み合わせの数は%dです。\n",combination(n,r));
+
+
+  return 0;
+}
+-----------------------------------------------------------------
+
+#include<stdio.h>
+struct Character{
+  char c;
+  int count;
+};
+#define MAX 25
+void search(struct Character data[],char key);
+void quick_sort(struct Character data[],int left,int right);
+void swap(int *a,int *b);
+void swap2(char *a,char *b);
+int main(void){
+  struct Character data[MAX];
+  int i;
+  char key;
+  int left=0,right=MAX-1;
+  for(i=0;i<MAX;i++){
+    data[i].c='A'+i;
+    data[i].count=0;
+  }
+  while(1){
+    scanf(" %c",&key);
+    i++;
+    if(key=='Z')
+      break;
+    search(data,key);
+  }
+  quick_sort(data,left,right);
+  printf("出現回数順に出力します\n");
+  for(i=0;data[i].count!=0;i++){
+    printf("%c    %d回\n",data[i].c,data[i].count);
+  }
+
+  return 0;
+
+}
+void search(struct Character data[],char key){
+  int i=0;
+  while(1){
+    if(data[i].c==key){
+      data[i].count++;
+    }
+    if(MAX-1<i)
+      break;
+    i++;
+  }
+
+}
+
+void quick_sort(struct Character data[],int left,int right){
+  int pl,pr,pivot;
+  pl=left;
+  pr=right;
+  pivot=data[(pr+pl)/2].count;
+
+  do{
+    while(data[pl].count>pivot){pl++;}
+    while(data[pr].count<pivot){pr--;}
+    if(pl<=pr){
+      swap(&data[pl].count,&data[pr].count);
+      swap2(&data[pl].c,&data[pr].c);
+      pl++;
+      pr--;
+
+      }
+  }while(pl<=pr);
+
+  if(left<pr)
+    quick_sort(data,left,pr);
+  if(pl<right)
+    quick_sort(data,pl,right);
+
+}
+void swap(int *a,int *b){
+  int tmp;
+  tmp=*a;
+  *a=*b;
+  *b=tmp;
+}
+void swap2(char *a,char *b){
+  int tmp;
+  tmp=*a;
+  *a=*b;
+  *b=tmp;
+}
+
+----------------------------------------------------------------------------
+
+#include<stdio.h>
+#define MAX 10
+int sp=-1;
+int stack[MAX];
+int push(int data);
+int pop();
+int main(void){
+  int a,data,x,y,i,num,sum;
+  while(1){
+    scanf("%d",&a);
+    if(a==1){
+      scanf("%d",&data);
+      y=push(data);
+    }
+    if(a==2){
+      scanf("%d",&x);
+      if(x==1){
+        sum=stack[sp]+stack[sp-1];
+        num=pop();
+        num=pop();
+        i=push(sum);
+      }
+      if(x==2){
+        sum=stack[sp]*stack[sp-1];
+        num=pop();
+        num=pop();
+        i=push(sum);
+      }
+    }
+    if(a==3){
+      num=pop();
+      break;
+    }
+  }
+  printf("Result is= %d\n",num);
+  return 0;
+
+}
+int push(int data){
+  sp++;
+  if(sp>=MAX){
+    printf("入りません\n");
+    return -1;
+  }else{
+    stack[sp]=data;
+    return 0;
+  }
+
+}
+int pop(){
+  int data;
+  if(sp<0){
+    printf("スタックには入ってないです\n");
+    return -1;
+  }
+  else{
+    data=stack[sp];
+    stack[sp]=-1;
+    sp--;
+    return data;
+  }
+}
+
+
+
+
+------------------------------------------------------------------
+
+u256123@cse-ssh[46]: cat 0725kimatu-1.txt
+Script started on Fri Jul 25 10:22:45 2014
+u256123@imac-586[31]: cat 0725kimatu-1.c
+#include<stdio.h>
+int combination(int n,int r){
+  if(n==r)
+    return 1;
+  else if(r==0)
+    return 1;
+  else if(r==1)
+    return n;
+  else
+    return (combination(n-1,r-1)+combination(n-1,r));
+}
+int main(void){
+  int n,r;
+  printf("n個の中からr個取り出す組み合わせを求めます\n");
+  printf("nの値は？:");
+  scanf("%d",&n);
+  printf("rの値は？:");
+  scanf("%d",&r);
+
+  printf("組み合わせの数は%dです。\n",combination(n,r));
+
+
+  return 0;
+}
+u256123@imac-586[32]: cc 0725kimatu-1.c
+u256123@imac-586[33]: a.out
+n個の中からr個取り出す組み合わせを求めます
+nの値は？:10
+rの値は？:2
+組み合わせの数は45です。
+u256123@imac-586[34]: a.out
+n個の中からr個取り出す組み合わせを求めます
+nの値は？:13
+rの値は？:8
+組み合わせの数は1287です。
+u256123@imac-586[35]: exit
+exit
+
+Script done on Fri Jul 25 10:23:18 2014
+
+----------------------------------------------------------------------
+
+u256123@cse-ssh[48]: cat 0725kimatu-2.txt
+Script started on Fri Jul 25 11:34:40 2014
+u256123@imac-586[31]: cat 0725kimatu-2.c
+#include<stdio.h>
+struct Character{
+  char c;
+  int count;
+};
+#define MAX 25
+void search(struct Character data[],char key);
+void quick_sort(struct Character data[],int left,int right);
+void swap(int *a,int *b);
+void swap2(char *a,char *b);
+int main(void){
+  struct Character data[MAX];
+  int i;
+  char key;
+  int left=0,right=MAX-1;
+  for(i=0;i<MAX;i++){
+    data[i].c='A'+i;
+    data[i].count=0;
+  }
+  while(1){
+    scanf(" %c",&key);
+    i++;
+    if(key=='Z')
+      break;
+    search(data,key);
+  }
+  quick_sort(data,left,right);
+  printf("出現回数順に出力します\n");
+  for(i=0;data[i].count!=0;i++){
+    printf("%c    %d回\n",data[i].c,data[i].count);
+  }
+
+  return 0;
+
+}
+void search(struct Character data[],char key){
+  int i=0;
+  while(1){
+    if(data[i].c==key){
+      data[i].count++;
+    }
+    if(MAX-1<i)
+      break;
+    i++;
+  }
+
+}
+
+void quick_sort(struct Character data[],int left,int right){
+  int pl,pr,pivot;
+  pl=left;
+  pr=right;
+  pivot=data[(pr+pl)/2].count;
+
+  do{
+    while(data[pl].count>pivot){pl++;}
+    while(data[pr].count<pivot){pr--;}
+    if(pl<=pr){
+      swap(&data[pl].count,&data[pr].count);
+      swap2(&data[pl].c,&data[pr].c);
+      pl++;
+      pr--;
+
+      }
+  }while(pl<=pr);
+
+  if(left<pr)
+    quick_sort(data,left,pr);
+  if(pl<right)
+    quick_sort(data,pl,right);
+
+}
+void swap(int *a,int *b){
+  int tmp;
+  tmp=*a;
+  *a=*b;
+  *b=tmp;
+}
+void swap2(char *a,char *b){
+  int tmp;
+  tmp=*a;
+  *a=*b;
+  *b=tmp;
+}
+u256123@imac-586[32]: cc 0725kimatu-2.c
+u256123@imac-586[33]: a.out
+A
+B
+C
+B
+D
+G
+B
+C
+Z
+出現回数順に出力します
+B    3回
+C    2回
+G    1回
+D    1回
+A    1回
+u256123@imac-586[34]: exit
+exit
+
+Script done on Fri Jul 25 11:35:17 2014
+
+---------------------------------------------------------------------
+u256123@cse-ssh[50]: cat 0725kimatu-3.txt
+Script started on Fri Jul 25 11:16:24 2014
+u256123@imac-586[31]: cat 0725kimatu-3.c
+#include<stdio.h>
+#define MAX 10
+int sp=-1;
+int stack[MAX];
+int push(int data);
+int pop();
+int main(void){
+  int a,data,x,y,i,num,sum;
+  while(1){
+    scanf("%d",&a);
+    if(a==1){
+      scanf("%d",&data);
+      y=push(data);
+    }
+    if(a==2){
+      scanf("%d",&x);
+      if(x==1){
+        sum=stack[sp]+stack[sp-1];
+        num=pop();
+        num=pop();
+        i=push(sum);
+      }
+      if(x==2){
+        sum=stack[sp]*stack[sp-1];
+        num=pop();
+        num=pop();
+        i=push(sum);
+      }
+    }
+    if(a==3){
+      num=pop();
+      break;
+    }
+  }
+  printf("Result is= %d\n",num);
+  return 0;
+
+}
+int push(int data){
+  sp++;
+  if(sp>=MAX){
+    printf("入りません\n");
+    return -1;
+  }else{
+    stack[sp]=data;
+    return 0;
+  }
+
+}
+int pop(){
+  int data;
+  if(sp<0){
+    printf("スタックには入ってないです\n");
+    return -1;
+  }
+  else{
+    data=stack[sp];
+    stack[sp]=-1;
+    sp--;
+    return data;
+  }
+}
+
+u256123@imac-586[32]: cc 0725kimatu-3.c
+u256123@imac-586[33]: a.out
+1 100
+1 200
+2 1
+3
+Result is= 300
+u256123@imac-586[34]: a.out
+1 100
+1 200
+2 1
+1 50
+2 2
+1 10
+2 1
+3
+Result is= 15010
+u256123@imac-586[35]: exit
+exit
+
+Script done on Fri Jul 25 11:17:26 2014
+
+
+
+
+
+
+
+
+

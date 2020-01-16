@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <script>
+   document.write("作成日：" + document.lastModified);
+  </script>
+  
+  <head>
+  <meta charset="UTF-8">
+  <title>Part07-Let'sTry-exercise</title>
+  <link rel="stylesheet" href="style07-1.css">
+  </head>
+  <body>
+    <p class="name">u276156 根本貴大</p>
+    <table>
+      <caption>イベントボランティア募集</caption>
+      <tr>
+	<th>イベント開催日</th>
+	<td>2013年10月1日</td>
+      </tr>
+      <tr>
+	<th>場所</th>
+	  <td>東京スカイタワー</td>
+      </tr>
+      <tr>
+	<th>募集人数</th>
+	<td>100人</td>
+      </tr>
+    </table>
+    <form action="entry.php" method="post">
+      <p>名前：<input type="text" name="name"></p>
+      <p>住所：<input type="text" name="address"></p>
+      <p>交通手段：<input type="radio" name="present" id="bus"><label for="bus">バス</label><input type="radio" name="present" id="train"><label for="train">
+      </label>
+      </p>
+    </form>
+  </body>
+</html>

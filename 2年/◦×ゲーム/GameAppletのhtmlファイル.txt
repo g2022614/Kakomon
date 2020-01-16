@@ -1,0 +1,10 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    246083 佐藤彩子<br>
+    <applet code="GameApplet.class" archive="u246083.jar" width="400" height="400">
+    </applet>
+  </body>
+</html>

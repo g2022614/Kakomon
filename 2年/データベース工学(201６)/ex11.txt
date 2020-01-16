@@ -1,0 +1,5 @@
+﻿u276156=> SELECT * FROM books NATURAL JOIN authors WHERE supervisor = '中村和樹';
+    isbn    |        title         | price |   author   | supervisor
+------------+----------------------+-------+------------+------------
+ 4620320250 | はやぶさ君の冒険日記 |  1260 | 小野瀬直美 | 中村和樹
+(1 行)

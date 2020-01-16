@@ -1,0 +1,145 @@
+﻿h1 {
+    color:red;
+    font-size:200%;
+}
+h2 {
+    position:center;
+    color:red;
+    font-size:150%;
+}
+h3 {
+    color:white;
+    font-size:180%;
+}
+p {
+    color:white;
+    font-size:100%;
+}
+
+body{
+    background-image:url(../image/check.jpg);
+    margin:0;
+    padding:0;
+}
+
+img {
+    width: 57%;
+    height: auto;
+}
+
+#main img{
+    width: 200%;
+    height: auto;
+}
+#box{
+    margin-left:22%; 
+    margin-right:22%; 
+    margin-top:1%; 
+    margin-bottom:1%; 
+    padding:2%; 
+    border:5px groove #cc0000;
+    background-color:black;   
+    overflow:hidden;
+}
+#box img{
+    max-width: 100%;
+    height: auto;
+}
+
+#main{
+    float:right;
+    width:55%;
+    padding:1%; 
+    background-color:#000000;
+}
+
+#fixedmenu{
+    margin-left:25%; 
+    margin-top:30%;
+    position:absolute; 
+    width:15%;
+    border:5px solid red;
+    background:#fff;
+    z-index:3;
+}
+
+#side{
+    width:30%;
+    padding:1%;
+    float:left;
+}
+
+/* --- ナビゲーションバー --- */
+div.nav {
+    width: 100%; /* ナビゲーションの幅 */
+    background: #000000 url(hor_menu6_off.gif) repeat-x top; /* ナビゲーションの背景 */
+    border-top: 2px #ff0000 solid; /* 上境界線 */
+    border-bottom: 2px #ff0000 solid; /* 下境界線 */
+    font-size: 80%;
+}
+
+/* --- メニューエリア --- */
+div.nav ul.nl {
+    width: 57%; /* メニューの幅 */
+    margin: 0 auto; /* センターに配置 */
+    padding: 0;
+    background: #000000  /* メニューの背景 */
+    border-left: 1px #ff0000 solid; /* メニューの左境界線 */
+    border-right: 1px #ff0000 solid; /* メニューの右境界線 */
+    list-style-type: none;
+    text-align: center;
+}
+
+/* --- メニュー項目 --- */
+div.nav ul.nl li {
+    width: 20%; /* 項目の幅 */
+    float: left;
+}
+
+/* --- リンク --- */
+div.nav ul.nl li a {
+    display: block;
+    position: relative; /* IE6用 */
+    padding: 3.5% 1% 2%; /* リンクエリアのパディング（上、左右、下） */
+    border-left: 1px #ff0000 solid; /* リンクエリアの左境界線 */
+    border-right: 1px #ff0000 solid; /* リンクエリアの右境界線 */
+    text-decoration: none; /* テキストの下線（なし） */
+    font-weight: bold; /* 文字の太さ（太字） */
+    color: #ffffff;
+    line-height: 100%; /* 行の高さ */
+}
+
+/* 英字部分 */
+div.nav ul.nl li a span.en {
+    display: block;
+    margin-top: 1%; /* 英字部分の上マージン */
+    font-size: 85%; /* 英字の文字サイズ */
+    font-weight: normal; /* 文字の太さ（ノーマル） */
+    color: #ff8000; /* 英字の文字色 */
+}
+
+/* --- ポイント時の設定 --- */
+div.nav ul.nl li a:hover {
+    background: #ffffff  /* ポイント時の背景 */
+}
+
+div.nav ul.nl li a:hover {
+    color: #000000  /* ポイント時の文字 */
+}
+
+div.nav ul.nl li a:hover span.en {
+    color: #0000ff; /* ポイント時の英字の文字色 */
+}
+
+/* --- clearfix --- */
+.clearFix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearFix {
+    min-height: 0.5%;
+}

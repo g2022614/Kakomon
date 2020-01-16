@@ -1,0 +1,7 @@
+﻿  Source.cpp
+d:\r20\数値解析演習\ソース(未完成含)\math3-2\math3-2\source.cpp(11): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+d:\r20\数値解析演習\ソース(未完成含)\math3-2\math3-2\source.cpp(11): warning C4305: '初期化中': 'double' から 'float' へ切り詰めます。
+d:\r20\数値解析演習\ソース(未完成含)\math3-2\math3-2\source.cpp(13): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+d:\r20\数値解析演習\ソース(未完成含)\math3-2\math3-2\source.cpp(13): warning C4305: '初期化中': 'double' から 'float' へ切り詰めます。
+  math3-2.vcxproj -> D:\R20\数値解析演習\ソース(未完成含)\math3-2\Debug\math3-2.exe
+  math3-2.vcxproj -> D:\R20\数値解析演習\ソース(未完成含)\math3-2\Debug\math3-2.pdb (Full PDB)

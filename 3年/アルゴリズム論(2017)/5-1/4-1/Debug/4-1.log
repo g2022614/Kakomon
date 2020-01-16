@@ -1,0 +1,9 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (4-1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Source.cpp
+d:\r20\3年\アルゴリズム論(2017)\5-1\4-1\source.cpp(15): warning C4473: 'scanf_s': 書式文字列として渡された引数が不足しています
+  d:\r20\3年\アルゴリズム論(2017)\5-1\4-1\source.cpp(15): note: プレースホルダーとそのパラメーターには 2 の可変個引数が必要ですが、1 が指定されています。
+  d:\r20\3年\アルゴリズム論(2017)\5-1\4-1\source.cpp(15): note: 不足している可変個引数 2 が書式文字列 '%s' に必要です
+  d:\r20\3年\アルゴリズム論(2017)\5-1\4-1\source.cpp(15): note: この引数はバッファー サイズとして使用されます
+d:\r20\3年\アルゴリズム論(2017)\5-1\4-1\source.cpp(9): warning C4101: 'i': ローカル変数は 1 度も使われていません。
+  4-1.vcxproj -> D:\R20\3年\アルゴリズム論(2017)\5-1\Debug\5-1.exe
+  4-1.vcxproj -> D:\R20\3年\アルゴリズム論(2017)\5-1\Debug\5-1.pdb (Full PDB)

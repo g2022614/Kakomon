@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<title>Part07-Let'sTry-</title>
+		<style>
+			table {
+				border: solid 1px #CCC;
+				border-collapse: collapse;
+				font-size: 14px;
+			}
+			th,td {
+				padding: 10px;
+				border: solid 1px #CCC;
+			}
+			th {
+				width: 150px;
+				background-color: #DDD;
+				text-align: left;
+			}
+			td {
+				width: 200px;
+			}
+			caption {
+				color: #66C;
+			}
+			p {
+				font-size: 14px;
+			}
+			input[type=text] {
+				width: 300px;
+			}
+		</style>
+	</head>
+	<body>
+		<table>
+			<caption>イベントボランティア募集</caption>
+			<tr>
+				<th>イベント開催日</th>
+				<td>2013年10月1日</td>
+			</tr>
+			<tr>
+				<th>場所</th>
+				<td>東京スカイタワー</td>
+			</tr>
+			<tr>
+				<th>募集人数</th>
+				<td>100人</td>
+			</tr>
+		</table>
+		<form action="entry.php" method="post">
+			<p>名前：<input type="text" name="name"></p>
+			<p>住所：<input type="text" name="address"></p>
+			<p>交通手段：<input type="radio" name="present" id="bus"><label for="bus">バス</label><input type="radio" name="present" id="train"><label for="train">電車</label></p>
+			<p>参加人数：<select>
+				<option value="p1">1人</option>
+				<option value="p2">2人</option>
+				<option value="p3">3人</option>
+				<option value="p4">4人</option>
+				<option value="p5">5人</option>
+				<option value="p6">6人以上</option>
+				<option value="p10">10人以上</option>
+			</select></p>
+			<p><input type="submit"></p>
+		</form>
+	</body>
+</html>

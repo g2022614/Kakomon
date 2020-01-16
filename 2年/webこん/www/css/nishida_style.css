@@ -1,0 +1,60 @@
+p{
+    color:#ffffff;
+}
+
+h1{
+    color:#ffffff;
+}
+
+h2{
+    color:#ffffff;
+}
+h3{
+    color:#ffffff;
+}
+
+s{
+    color:#ffffff;
+}
+
+
+#box{
+    margin-left:15%; 
+    margin-right:15%; 
+    margin-top:10px; 
+    margin-bottom:5px; 
+    padding-top:20px; 
+    border:5px groove #cc0000;
+    background-color:black;   
+    width:1200px;
+    
+}
+
+body{
+    background-color:#000000;
+}
+
+#right{
+    margin-left:10px; 
+    margin-right:10px; 
+    float:right;
+    width:400px;
+}
+
+#left{
+    margin-left:10px; 
+    width:800px;
+}
+
+#twitter{
+    float:right;
+}
+
+#menu{
+    border:5px groove #cc0000;  
+    margin:10px; 
+    padding:10px; 
+    border:5px  black;
+    width:100px;
+    background-color:#ffffff;   
+}

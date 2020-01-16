@@ -1,0 +1,20 @@
+﻿
+p {
+	color: blue;
+	line-height: 150%;
+}
+header h1 {
+	color: #F00; 
+	font-size: 50px;
+}
+header p {
+	color: #C33;
+	font-style: italic;
+}	
+section h2 {
+	font-size: 25px;
+}
+section p {
+	font-size: 19px;
+}
+

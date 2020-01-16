@@ -1,0 +1,20 @@
+#include<stdio.h>
+
+int main(void)
+{
+  int i,n;
+  int N=100; /*Å‘å‚Ì”*/
+  int counter=0; /*œZ‚Ì‰ñ”*/
+
+  for(n=2;n<=N;n++) {
+    for(i=2;i<n;i++) {
+      counter++;
+      if(n%i==0) /*Š„‚èØ‚ê‚½‚ç‘f”‚Å‚È‚¢*/
+      break;
+    }
+    if(n==i) printf("%d\n", n); /*ÅŒã‚Ü‚ÅŠ„‚èØ‚ê‚È‚¢*/
+  }
+  printf("Total number of calculation : %d\n", counter);
+
+  return(0);
+}

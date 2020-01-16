@@ -1,0 +1,88 @@
+
+cn-43#sh run
+Building configuration...
+
+Current configuration : 1160 bytes
+!
+version 12.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname cn-43
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$yuiL$ZkYYfRkFRrSYdS0qqcRCN1
+!
+no aaa new-model
+ip cef
+!
+!
+!
+!
+!
+!
+ --More--         !
+!
+!
+!
+interface FastEthernet0/0
+ ip address 192.168.1.254 255.255.255.0
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/1
+ no ip address
+ shutdown
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/0/0
+ switchport access vlan 100
+!
+interface FastEthernet0/0/1
+ switchport access vlan 200
+!
+interface FastEthernet0/0/2
+ switchport access vlan 200
+ --More--         !
+interface FastEthernet0/0/3
+!
+interface Vlan1
+ no ip address
+!
+interface Vlan100
+ ip address 192.168.100.254 255.255.255.0
+!
+interface Vlan200
+ ip address 192.168.200.254 255.255.255.0
+!
+router ospf 1
+ log-adjacency-changes
+ network 192.168.1.0 0.0.0.255 area 0
+ network 192.168.100.0 0.0.0.255 area 0
+ network 192.168.200.0 0.0.0.255 area 0
+!
+ip forward-protocol nd
+!
+ip http server
+no ip http secure-server
+!
+ --More--         !
+control-plane
+!
+!
+line con 0
+ password net
+ login
+line aux 0
+line vty 0 4
+ password net
+ login
+!
+scheduler allocate 20000 1000
+end
+
+cn-43#

@@ -1,0 +1,97 @@
+89876	5Auto-saving...done6789876543210798765432106987
+	            passedUnit++;
+        }
+        gpa = (gpa + 3 * unit) / totalUnit;
+        if(gpa>=0) return 0;
+        else return -1;
+    }
+    // (c)                                                                                                                                                              
+
+    int getB(int unit){
+        int i;
+        gpa = gpa * totalUnit;
+        for(i=0; i<unit; i++){
+            totalUnit++;
+            passedUnit++;
+        }
+        gpa=(gpa + 2 * unit) / totalUnit;
+        if(gpa>=0) return 0;
+        else return -1;
+    }41% L665432105987654321049
+	    int getS(int unit){
+        int i;
+        gpa = gpa * totalUnit;
+        for(i=0; i<unit; i++){
+            totalUnit++;
+            passedUnit++;
+        }
+        gpa = (gpa + 4 * unit) / totalUnit ;
+        if(gpa>=0) return 0;
+        else return -1;
+    }
+
+    // (b)                                                                                                                                                              
+
+    int getA(int unit){
+        int i;
+        gpa = gpa * totalUnit;
+        for(i=0; i<unit; i++){
+            totalUnit++;27% L48765432103987654321
+	    // コンストラクタ                                                                                                                                                   
+
+    public Student(String myName,String myId){
+        name = myName;  // 名前を表す                                                                                                                                   
+
+        id = myId;      // 学生番号を表す                                                                                                                               
+
+        gpa = 0;        // 成績を表す                                                                                                                                   
+
+        totalUnit = 0;  // 受講済みの単位数を表す                                                                                                                       
+
+        passedUnit = 0; // 合格済みの単位数を表す                                                                                                                       
+
+    }
+
+    // (a)~(e)　成績の更新に成功した際0を返し、0以下の値が引数で渡されたときには-1を戻り値として返す機能を追加                                                          
+
+
+    public int getGrade(String score, int unit){
+        GradeBook.getS(unit);
+
+    }
+
+
+    // (a)                                                                                                                                                              
+ 9% L302987654321019876543
+// 256129 Sugiura Kei                                                                                                                                                   
+
+// kadai4-(1)                                                                                                                                                           
+
+
+public class Student{
+
+    // インスタンス変数                                                                                                                                                 
+
+    private String name;
+    private String id;
+    private int totalUnit,passedUnit;
+    private float gpa;
+Top L12109 8765434567891012345218932345	            passedUnit++;
+        }
+        gpa = (gpa + 4 * unit) / totalUnit ;
+        if(gpa>=0) return 0;
+        else return -1;
+    }
+
+    // (b)                                                                                                                                                              
+
+    int getA(int unit){
+        int i;
+        gpa = gpa * totalUnit;
+        for(i=0; i<unit; i++){
+            totalUnit++;
+            passedUnit++;
+        }
+        gpa = (gpa + 3 * unit) / totalUnit;
+        if(gpa>=0) return 0;
+        else return -1;17% L367

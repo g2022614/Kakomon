@@ -1,0 +1,16 @@
+cn-54(config-if)#
+*Dec 15 04:32:21.407: %LINK-3-UPDOWN: Interface Dialer1, changed state to up
+*Dec 15 04:32:30.607: %DIALER-6-BIND: Interface Vi1 bound to profile Di1
+*Dec 15 04:32:30.607: Vi1 PPP: Using dialer call direction
+*Dec 15 04:32:30.607: Vi1 PPP: Treating connection as a callout
+*Dec 15 04:32:30.607: Vi1 PPP: Session handle[3A000011] Session id[0]
+*Dec 15 04:32:30.607: Vi1 PPP: Authorization required
+*Dec 15 04:32:30.607: Vi1 PPP: No remote authentication for call-out
+*Dec 15 04:32:30.611: %LINK-3-UPDOWN: Interface Virtual-Access1, changed state to up
+*Dec 15 04:32:32.623: Vi1 PPP: No authorization without authentication
+*Dec 15 04:32:32.623: Vi1 CHAP: I CHALLENGE id 120 len 33 from "network-serv"
+*Dec 15 04:32:32.623: Vi1 CHAP: Using hostname from interface CHAP
+*Dec 15 04:32:32.623: Vi1 CHAP: Using password from interface CHAP
+*Dec 15 04:32:32.623: Vi1 CHAP: O RESPONSE id 120 len 39 from "group9@network.net"
+*Dec 15 04:32:32.623: Vi1 CHAP: I SUCCESS id 120 len 18 msg is "Access granted"
+*Dec 15 04:32:33.623: %LINEPROTO-5-UPDOWN: Line protocol on Interface Virtual-Access1, changed state to up

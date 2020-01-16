@@ -1,0 +1,9 @@
+﻿body{
+    background-image:url(../image/logo.jpg);
+    background-repeat:repeat;
+}
+
+#box{
+    margin:20%;
+    background-color:white;
+}

@@ -1,0 +1,117 @@
+public class Board{
+    private int[][] ban; //○×ゲームの盤の状態のインスタンス変数
+    private int turn; //次の手を示すインスタンス変数
+
+    public Board(){ //コンストラクタ
+        //banを初期化
+        ban = new int[3][3];
+        int i,j;
+        for(i=0;i<3;i++){
+            for(j=0;j<3;j++){
+                ban[i][j]=0;
+            }
+        }
+        //turnを初期化
+        turn=1;
+    }
+
+    //○か×を置くメソッド
+    public int put(int x, int y){
+        int i,j;
+
+        //指定箇所がすでに置かれている場合か、勝敗が決まっている場合
+        if(ban[x][y]!=0 || turn==-1)
+            return -1;
+
+        //指定した箇所に現在のターンの値を入れる
+        ban[x][y]=turn;
+        //ターンを変える
+        if(turn==1)
+            turn=2;
+        else if(turn==2)
+            turn=1;
+
+        //横にそろって勝敗が決まる場合
+        for(i=0;i<3;i++){
+            if(ban[i][0]==ban[i][1] && ban[i][1]==ban[i][2]){
+                if(ban[i][0]==1){ //○が勝った場合
+                    turn=-1;
+                    return 1;
+                }
+                if(ban[i][0]==2){ //×が勝った場合
+                    turn=-1;
+                    return 2;
+                }
+            }
+        }
+        //縦にそろって勝敗が決まる場合
+        for(i=0;i<3;i++){
+            if(ban[0][i]==ban[1][i] && ban[1][i]==ban[2][i]){
+                if(ban[0][i]==1){ //○が勝った場合
+                    turn=-1;
+                    return 1;
+                }
+                if(ban[0][i]==2){ //×が勝った場合
+                    turn=-1;
+                    return 2;
+                }
+            }
+        }
+        //右下がりのななめにそろって勝敗が決まる場合
+        if(ban[0][0]==ban[1][1] && ban[1][1]==ban[2][2]){
+            if(ban[0][0]==1){ //○が勝った場合
+                turn=-1;
+                return 1;
+            }
+            if(ban[0][0]==2){ //×が勝った場合
+                turn=-1;
+                return 2;
+            }
+        }
+        //右上がりのななめにそろって勝敗が決まる場合
+        if(ban[0][2]==ban[1][1] && ban[1][1]==ban[2][0]){
+            if(ban[0][2]==1){ //○が勝った場合
+                turn=-1;
+                return 1;
+            }
+            if(ban[0][2]==2){ //×が勝った場合
+                turn=-1;
+                return 2;
+            }
+        }
+        //勝敗がまだ決まっていない場合
+        for(i=0;i<3;i++){
+            for(j=0;j<3;j++){
+                if(ban[i][j]==0)
+                    return 0;
+            }
+        }
+        //引き分けの場合
+        turn=-1;
+        return 3;
+    }
+
+    //ゲームを初期化するメソッド
+    public void reset(){
+        int i,j;
+
+        //banを初期化
+        for(i=0;i<3;i++){
+            for(j=0;j<3;j++){
+                ban[i][j]=0;
+            }
+        }
+        //turnを初期化
+        turn=1;
+    }
+
+    //盤の状態を確認するメソッド
+    public int get(int x, int y){
+        return ban[x][y]; //指定箇所の状態を返す
+    }
+
+    //次の手を示すメソッド
+    public int getTurn(){
+        return turn; //turnの値を返す
+    }
+}

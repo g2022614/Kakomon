@@ -1,0 +1,13 @@
+sh int
+Ethernet0 is up, line protocol is down 
+  Hardware is PQUICC Ethernet, address is 001a.e232.6a7c (bia 001a.e232.6a7c)
+  Internet address is 192.168.26.254/24
+
+Ethernet1 is administratively down, line protocol is down 
+  Hardware is PQUICC Ethernet, address is 000d.28dc.88bd (bia 000d.28dc.88bd)
+
+FastEthernet0 is up, line protocol is up 
+  Hardware is PQUICC_FEC, address is 000f.f72d.cfce (bia 000f.f72d.cfce)
+  Internet address is 192.168.1.126/24
+
+cn-26#

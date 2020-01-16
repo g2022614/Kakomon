@@ -1,0 +1,9 @@
+﻿  Source.cpp
+d:\r20\3年\数値解析演習(2017)\9-1\9-1\source.cpp(14): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+d:\r20\3年\数値解析演習(2017)\9-1\9-1\source.cpp(14): warning C4305: '初期化中': 'double' から 'float' へ切り詰めます。
+d:\r20\3年\数値解析演習(2017)\9-1\9-1\source.cpp(61): warning C4305: '初期化中': 'double' から 'float' へ切り詰めます。
+d:\r20\3年\数値解析演習(2017)\9-1\9-1\source.cpp(157): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
+d:\r20\3年\数値解析演習(2017)\9-1\9-1\source.cpp(201): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\r20\3年\数値解析演習(2017)\9-1\9-1\source.cpp(184): warning C4101: 'xx': ローカル変数は 1 度も使われていません。
+  9-1.vcxproj -> D:\R20\3年\数値解析演習(2017)\9-1\Debug\9-1.exe
+  9-1.vcxproj -> D:\R20\3年\数値解析演習(2017)\9-1\Debug\9-1.pdb (Full PDB)
